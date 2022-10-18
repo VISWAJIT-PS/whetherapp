@@ -1,0 +1,65 @@
+
+
+<div class="wetherCard">
+ 
+        <div  class=" upper-data">
+            <img src="{{morNitImg}}" >
+            
+            <div class="wether-data">
+                <div class="location">{{place}}  <img src="{{wetherIcon}}"></div>
+                <div class="temperature">{{ tempc | number:'1.0-0'}}°C</div>
+               
+            </div>
+        </div>
+        
+        <div class=" lower-data">
+            <div class="more-info-label" >
+               <p>Hey {{fullname}}</p>  
+                <p> {{wetherText}} in {{place}}  </p>
+              
+
+             
+            </div>
+            <hr class="line">
+            
+            <div class="more-info-container">
+                <div class="info-block">
+                    <div class="info-block-label">
+                        <img src="../assets/fahrenheit.png">
+                        <span>{{tempf}}°F </span>
+                    </div>
+                 
+                </div>
+              
+                <div class="info-block">
+                    <div class="info-block-label">
+                        <img src="../assets/humidity.png">
+                        <span>{{humidity}} %</span>
+                    </div>
+                    
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-label">
+                        <img src="../assets/wind.png">
+                        <span>{{wind}} km/h </span>
+                    </div>
+                    
+                </div>
+
+                
+                <div class="info-block">
+                    <div class="info-block-label">
+                        <img src="../assets/time.png">
+                        <span>{{newtime}}</span>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+       
+        </div>
+
+    
+</div>

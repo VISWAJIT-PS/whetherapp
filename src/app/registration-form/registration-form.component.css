@@ -1,0 +1,29 @@
+.regcontainer{
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px;
+    background: #fff;
+}
+.regForm{
+    flex-wrap: wrap;
+    display: grid;
+    padding: 30px;
+    background: #fff;
+    gap: 30px;
+    width: 850px;
+    border-radius: 20px;
+    /* box-shadow: 10px 10px 20px; */ 
+}
+.gender{
+    background: #ececec;
+    padding: 10px;
+    border-radius: 8%;
+}
+.mat-card{
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    .regForm {
+        width: 100%;
+    }
+  }

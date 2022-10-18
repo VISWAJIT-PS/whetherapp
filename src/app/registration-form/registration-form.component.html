@@ -1,0 +1,103 @@
+<div class="regcontainer">
+<form [formGroup]="profilrForm" #ngForm="ngForm"  class="form-container" (ngSubmit)="saveFrom()">
+    <mat-card>
+      <mat-card-content>
+    <div class="regForm">
+    <h1 class="center">Registration Form</h1>
+      <div class="flex">
+        <mat-form-field appearance="fill" class=" w-full">
+          <mat-label>First Name</mat-label>
+          <input formControlName="firstName" matInput>
+          <!-- <mat-hint style="color: red;" *ngif="profilrForm.get('firstName').touched && profilrForm.get('firstName').errors?.required">
+              First name is Missing or not In proper format
+          </mat-hint> -->
+  
+        </mat-form-field>
+        <mat-form-field appearance="fill" class=" w-full">
+          <mat-label>Last Name</mat-label>
+          <input formControlName="lastName" matInput>
+        </mat-form-field>
+      </div>
+    
+      <div class="flex">
+        <mat-form-field  appearance="fill" class=" w-full">
+          <mat-label>Choose your date of birth</mat-label>
+          <input #dob  (mousemove)="clickDob(dob.value)"   [max]="maxDate" formControlName="dob" matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle  matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker  #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class=" w-full">
+          <mat-label> Age</mat-label>
+          <!-- <input matInput disabled value="{{dispAgeVal}}" formControlName="age"  > -->
+          <input (mousemove)="clickDob(dob.value)" matInput readonly="true" value="{{dispAgeVal}}">
+        </mat-form-field>
+      </div>
+      <div class="flex">
+        <mat-form-field appearance="fill" class=" w-full">
+          <mat-label>Mobile Number</mat-label  >
+          <input formControlName="mobleNo" matInput="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class=" w-full">
+          <mat-label >Email Id</mat-label>
+          <input   formControlName="mailid" matInput="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"  >
+        </mat-form-field>
+      </div>
+   
+      
+       <div class="flex">
+        <mat-radio-group  formControlName="gender" class="margin-left" class=" w-full">
+          <mat-label class="gender">Gender </mat-label> &nbsp; &nbsp;
+            <mat-radio-button value="male"> Male </mat-radio-button> &nbsp;
+            <mat-radio-button value="female"> Female </mat-radio-button> &nbsp;
+            
+        </mat-radio-group><br>
+       
+    
+        <div class=" w-full">
+          <input  formControlName="img" class="form-control block w-full text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="file"  [ngClass]="{'is-invalid':submitted && profilrForm.controls.img.errors}" accept="image/png, image/jpeg" id="formFileMultiple" multiple>
+        </div>
+      </div>
+      
+     <!-- <app-postal-code></app-postal-code> -->
+     <div class="flex">
+        <mat-form-field appearance="fill" class=" w-full">
+          <mat-label >Pincode</mat-label>
+          <input   #pincode  (change)="getPostelData(pincode.value)"  formControlName="pincode" matInput="number" pattern="[0-9]{3}[0-9]{3}"   >
+        </mat-form-field>
+        <mat-form-field appearance="fill" class=" w-full">
+            <mat-label>District</mat-label>
+            <input value="{{this.District}}"   (change)="getPostelData(pincode.value)" formControlName="district" matInput readonly>
+          </mat-form-field>
+      </div>
+    
+       <div class="flex">
+        <mat-form-field appearance="fill" class=" w-full">
+            <mat-label>State</mat-label>
+            <input value="{{this.State}}"   (change)="getPostelData(pincode.value)"  formControlName="state" matInput readonly>
+          </mat-form-field>
+        <mat-form-field appearance="fill" class=" w-full">
+            <mat-label>Country</mat-label>
+            <input value="{{this.Country}}"   (change)="getPostelData(pincode.value)"  formControlName="country" matInput readonly>
+          </mat-form-field> 
+       </div>
+
+        
+      <div class="flex">
+        <mat-form-field class="example-full-width w-full" appearance="fill">
+          <mat-label >Address Line 1</mat-label>
+          <textarea  formControlName="adressLineOne" matInput placeholder="Bulding Number, House Name, Street Name"></textarea>
+        </mat-form-field>
+        <mat-form-field class="example-full-width w-full" appearance="fill">
+          <mat-label>Address Line 2</mat-label>
+          <textarea  formControlName="adressLineTwo" matInput placeholder="City/Town/Village,(Nearest landmark)"></textarea>
+        </mat-form-field>
+      </div>
+    
+      <div class="flex">
+        <button class=" w-full h-full"  mat-raised-button color="primary"  >Save</button>
+      </div>
+    </div>
+  </mat-card-content>
+  </mat-card>
+  </form>
+  </div>

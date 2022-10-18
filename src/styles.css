@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+html, body { height: 100%; }
+*{
+    margin: 0rem;
+}
+body { margin: 0rem;
+    font-family: R oboto, "Helvetica Neue", sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    background: linear-gradient(90deg, rgba(255,254,237,1) 0%, rgba(255,231,196,1) 51%, rgba(255,211,165,1) 100%);
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    }
+.center {
+    display: block;
+    text-align: center;
+    align-items: center;
+  }
+.flex{
+    display: flex;
+    column-gap: 20px;
+}
+.flex-gap{
+    gap: 30px;
+}
+@media only screen and (max-width: 600px) {
+    .flex {
+        flex-wrap: wrap;
+    }
+  }

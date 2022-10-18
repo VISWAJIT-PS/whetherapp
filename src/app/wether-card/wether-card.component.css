@@ -1,0 +1,168 @@
+.homeIcon{
+    display: flex;
+    justify-content: center;
+}
+.wetherCard{
+    background:linear-gradient(90deg, rgb(17 13 13) 0%, rgb(125 123 129) 100%);
+   width:60vh ;
+   height: 100vh ;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px;
+}
+.upper-data{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.lower-data{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   padding: 1em;
+   display: flex;
+   flex-direction: column;
+}
+.upper-data img{
+    position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   /* filter: blur(0.8px); */
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+}
+.wether-data{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+
+}
+.location{
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500; 
+}
+.location img{
+    height: 35px;
+    width: 35px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.temperature{
+    color: #fff;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 900; 
+}
+
+.more-info-label{
+    color: #fff;
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    gap:5px;
+}
+.more-info-container{
+
+    flex:1;
+    /* margin-top: 1em; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.info-block{
+    width:50%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+.info-block-label{
+    /* color:#fff; */
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-block-label img{
+    width:2.5em;
+}
+
+.info-block-label span{
+    color: #fff;
+    font-size: 1.2em;
+}
+.info-block-value{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5em;
+
+}
+.line{
+    background-color: #fff;
+    color: #fff;
+    
+}
+
+
+@media only screen and ( max-height: 700px ) {
+    .wetherCard {
+        width: 80vh;
+         height: 100vh;
+
+    }
+  }
+
+@media only screen and ( max-height: 500px ) {
+    .wetherCard {
+        width: 120vh;
+         height: 170vh;
+
+    }
+  }
+@media only screen and ( max-height: 300px ) {
+    .wetherCard {
+        width: 109vh;
+         height: 155vh;
+
+    }
+  }
+@media only screen and ( max-height: 200px ) {
+    .wetherCard {
+        width: 219vh;
+        height: 408vh;
+
+    }
+  }
+
+@media only screen and (max-width: 480px ) {
+    .wetherCard {
+        width: 39vh;
+        height: 75vh
+    }
+  }

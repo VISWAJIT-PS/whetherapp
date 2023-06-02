@@ -47,9 +47,9 @@ export class WetherCardComponent implements OnInit {
     this.fullname=this.regformdata.firstName+" "+this.regformdata.lastName
     this.loction=this.regformdata.block
     this.apiKey="b458c5dff50a4947b71190121230206"
-    console.log(this.loction)
+    // console.log(this.loction)
     this.http.get("https://api.weatherapi.com/v1/current.json?key="+this.apiKey+"&q="+this.loction+"&aqi=no").subscribe((data:any)=>{
-      console.log(data)
+      // console.log(data)
       this.wetherdataList=data
       this.tempc=this.wetherdataList.current.temp_c
       this.tempf=this.wetherdataList.current.temp_f

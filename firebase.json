@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist\\efeed-task",
+    "public": "y",
     "ignore": [
       "firebase.json",
       "**/.*",
